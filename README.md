@@ -12,7 +12,7 @@ This package contains low-level Rust bindings for the Lucid Arena SDK.
 
 ``` toml
 [dependencies]
-lucid-arena-rs = "0.1.0"
+lucid-arena-sys = "0.1.0"
 ```
 
 ## Example usage

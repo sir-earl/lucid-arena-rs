@@ -1,7 +1,14 @@
 [package]
-name = "lucid-arena-rs"
+name = "lucid-arena-sys"
 version = "0.1.0"
+license = "MIT"
 edition = "2021"
+
+description = "This package contains low-level Rust bindings for the Lucid Arena SDK."
+repository  = "https://github.com/sir-earl/lucid-arena-sys"
+readme      = "README.md"
+keywords    = ["lucid", "arena", "bindings", "camera"]
+categories  = ["external-ffi-bindings", "hardware-support"]
 
 [dependencies]
 
