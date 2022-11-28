@@ -8,7 +8,11 @@ fn main() {
     }
 
     // Tell cargo to tell rustc to link the Arena shared library.
-    println!("cargo:rustc-link-lib=ArenaC_v140");
+    if let Some(lucid_arena_sdk_lib_name) = option_env!("LUCID_ARENA_SDK_LIB_NAME") {
+        println!("cargo:rustc-link-lib={}", lucid_arena_sdk_lib_name);
+    } else {
+        println!("cargo:rustc-link-lib=ArenaC_v140");
+    }
 
     // Tell cargo to invalidate the built crate whenever the wrapper changes
     println!("cargo:rerun-if-changed=wrapper.h");
